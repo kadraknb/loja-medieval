@@ -15,4 +15,13 @@ export default class ProductsModel {
     const { insertId } = dataInserted;
     return { id: insertId, ...products };
   }
+
+  async getAll(): Promise<IProducts[]> {
+    const [result] = await this.connection.execute<IProducts[] & ResultSetHeader>(
+      `SELECT
+        id, name, amount 
+      FROM Trybesmith.Products`,
+    );
+    return result;
+  }
 }

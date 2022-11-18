@@ -7,4 +7,8 @@ export default class ProductsService {
   public create(productsData: IProducts): Promise<IProducts> {
     return this.products.create(productsData);
   }
+
+  getAll(): Promise<IProducts[]> {
+    return this.products.getAll();
+  }
 }
