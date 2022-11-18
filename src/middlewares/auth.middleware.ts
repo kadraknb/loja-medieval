@@ -7,7 +7,7 @@ export default function authMiddleware(req: Request, _res: Response, next: NextF
 
     if (!token) {
       const e = new Error('Token não encontrado!');
-      e.name = '401';
+      e.stack = '401';
       throw e;
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
@@ -18,7 +18,7 @@ export default function authMiddleware(req: Request, _res: Response, next: NextF
   } catch (err) {
     console.log(err);
     const e = new Error('Não autorizado!');
-    e.name = '401';
+    e.stack = '401';
     throw e;
   }
 }

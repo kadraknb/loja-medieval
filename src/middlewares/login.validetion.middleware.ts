@@ -11,7 +11,7 @@ export default function loginMiddleware(req: Request, _res: Response, next: Next
 
   if (!password) {
     const e = new Error('"password" is required');
-    e.name = '400';
+    e.stack = '400';
     throw e;
   }
 
