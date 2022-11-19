@@ -5,7 +5,7 @@ export default function loginMiddleware(req: Request, _res: Response, next: Next
 
   if (!username) {
     const e = new Error('"username" is required');
-    e.name = '400';
+    e.stack = '400';
     throw e;
   }
 

@@ -11,7 +11,7 @@ export default class LoginService {
 
     if (!result[0]) {
       const e = new Error('Username or password invalid');
-      e.name = '401';
+      e.stack = '401';
       throw e;
     }
     
