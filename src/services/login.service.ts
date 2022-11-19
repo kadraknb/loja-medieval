@@ -1,7 +1,6 @@
 import { ILogin } from '../interfaces/ILogin';
 import LoginModel from '../models/login.model';
 import createToken from '../utils/create.Jwt';
-// import HttpException from '../utils/http.exception';
 
 export default class LoginService {
   public login = new LoginModel();

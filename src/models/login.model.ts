@@ -1,4 +1,3 @@
-// src/models/User.ts
 import { RowDataPacket } from 'mysql2';
 import mysql from './connection';
 import { ILogin } from '../interfaces/ILogin';
