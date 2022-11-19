@@ -8,4 +8,9 @@ export default class RequestsService {
     const AllRequests = await this.requests.getAll();
     return AllRequests;
   }
+
+  async create(productsIds: number[], userId: number): Promise<IRequests> {
+    await this.requests.create(productsIds, userId);
+    return { userId, productsIds };
+  }
 }

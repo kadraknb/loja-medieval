@@ -9,4 +9,12 @@ export default class RequestsController {
 
     res.status(200).json(AllRequests);
   }
+
+  async createRequests(req: Request, res: Response) {
+    const { body: { productsIds, user: { id } } } = req;
+    
+    const AllRequests = await this.requestsService.create(productsIds, id);
+
+    res.status(201).json(AllRequests);
+  }
 }

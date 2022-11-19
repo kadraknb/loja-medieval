@@ -5,11 +5,11 @@ import createToken from '../utils/create.Jwt';
 export default class UserService {
   public user = new UserModel();
 
-  public create(userData: IUser): string {
+  public async create(userData: IUser): Promise<string> {
     const { username, classe, level } = userData;
-    this.user.create(userData);
+    const id = await this.user.create(userData);
 
-    const token = createToken({ username, classe, level });
+    const token = createToken({ id, username, classe, level });
     return token;
   }
 }

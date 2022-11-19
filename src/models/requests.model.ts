@@ -15,4 +15,20 @@ export default class ProductsModel {
     );
     return result;
   }
+
+  public async create(productsIds: number[], userId: number): Promise<void> {
+    const [dataInserted] = await this.connection.execute<ResultSetHeader>(
+      'INSERT INTO Trybesmith.Orders (userId) VALUES (?)',
+      [userId],
+    );
+    
+    const { insertId } = dataInserted;
+    
+    productsIds.forEach(async (productsId) => {
+      await this.connection.execute<ResultSetHeader>(
+        'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?',
+        [insertId, productsId],
+      );
+    });
+  }
 }

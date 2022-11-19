@@ -11,7 +11,6 @@ export default function productsMiddleware(req: Request, _res: Response, next: N
 
   const { error } = schema.validate({ name, amount });
 
-  console.log(error?.details[0]);
   if (error) {
     error.stack = error?.details[0].type === 'any.required' ? '400' : '422';
     throw error;

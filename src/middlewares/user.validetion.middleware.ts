@@ -13,7 +13,6 @@ export default function userMiddleware(req: Request, _res: Response, next: NextF
 
   const { error } = schema.validate({ username, classe, level, password });
 
-  console.log(error?.details[0]);
   if (error) {
     error.stack = error?.details[0].type === 'any.required' ? '400' : '422';
     throw error;

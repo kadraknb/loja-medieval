@@ -1,5 +1,5 @@
 export interface IUser {
-  id?: number;
+  id?: number | Promise<number>;
   username: string;
   classe: string;
   level: number;
