@@ -1,13 +1,47 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Boas-vindas ao repositório do API de Blogs!
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+<details>
+  <summary><strong>O que foi desenvolvido</strong></summary>
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Neste projeto, foi criar uma loja de itens medievais, no formato de uma API, utilizando Typescript.
+
+Foi desenvolvido todas as camadas da aplicação (Models, Service e Controllers), por meio dessa aplicação, será possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (ou CRUD, para as pessoas mais íntimas - Create, Read, Update e Delete).
+
+Foi criados alguns endpoints que irão ler e escrever em um banco de dados, utilizando o MySQL.
+
+<br />
+</details>
+
+## 🛠 Tecnologias
+
+- TypeScript
+- Node.js
+- Docker
+- MySQL
+- Express
+- JWT
+
+## 🚀 Instalação e execução
+
+1. Faça um clone desse repositório;
+2. Entre na pasta rodando `cd loja-medieval`;
+3. Rode `npm install` para instalar as dependências;
+4. Rode `docker-compose up -d --build` rodando no Docker.
+
+
+<details>
+  <summary><strong>Endpoint</strong></summary>
+  
+  * http://localhost:3000/users
+  * http://localhost:3000/login
+  * http://localhost:3000/products
+  * http://localhost:3000/orders
+
+</details>
+
+
+## 📪 Contato
+
+- Email: [vagner_cardoso_s@outlook.com](vagner_cardoso_s@outlook.com)
+- GitHub: [kadraknb](https://github.com/kadraknb)
+- LinkedIn: [vagner-cardos-santos](https://www.linkedin.com/in/vagner-cardos-santos/)
